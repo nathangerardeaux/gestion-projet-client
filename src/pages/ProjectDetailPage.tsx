@@ -44,7 +44,6 @@ export function ProjectDetailPage() {
       .catch((err) => setError(getApiError(err)));
   }, [projectId, filter]);
 
-  // Recharge la liste des taches apres une action.
   async function reloadTasks() {
     setTasks(await tasksApi.fetchTasks(projectId, filter === '' ? undefined : filter));
   }

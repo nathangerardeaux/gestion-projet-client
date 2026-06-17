@@ -46,7 +46,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   );
 }
 
-// Hook de confort : const { user, login, logout } = useAuth()
 export function useAuth() {
   const ctx = useContext(AuthContext);
   if (!ctx) throw new Error('useAuth doit etre utilise dans <AuthProvider>');
